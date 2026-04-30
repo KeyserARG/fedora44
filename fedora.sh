@@ -42,6 +42,7 @@ function soporte_multimedia() {
     sudo dnf swap -y 'ffmpeg-free' 'ffmpeg' --allowerasing
     sudo dnf group install -y sound-and-video
     sudo dnf install -y ffmpeg-libs libva libva-utils
+    sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
     echo "¡Soporte multimedia y codecs listos!"
     echo ""
 }
