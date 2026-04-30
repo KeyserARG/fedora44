@@ -40,7 +40,6 @@ function soporte_multimedia() {
     echo "--- 4. Instalando codecs y soporte multimedia ---"
     sudo dnf4 group install -y multimedia
     sudo dnf swap -y 'ffmpeg-free' 'ffmpeg' --allowerasing
-    sudo dnf update -y @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
     sudo dnf group install -y sound-and-video
     sudo dnf install -y ffmpeg-libs libva libva-utils
     echo "¡Soporte multimedia y codecs listos!"
